@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stability Roadmap Visualizer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app" id="app">
+    <header class="header">
+      <h1>Stability Roadmap</h1>
+      <p class="sub">Click any step to reveal the AI-generated metaphor and description.</p>
+    </header>
+
+    <nav class="progress" aria-label="Roadmap progress">
+      <div class="progress-track" id="progressTrack">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+
+      <ol class="steps" id="steps" role="tablist" aria-label="Roadmap steps">
+        <!-- Steps populated by JS -->
+      </ol>
+    </nav>
+
+    <section class="viewer" id="viewer">
+      <div class="image-wrap">
+        <img id="phaseImage" alt="Phase visual" src="" />
+      </div>
+
+      <article class="description" id="description" tabindex="0" aria-live="polite">
+        <!-- Phase title & text populated by JS -->
+      </article>
+    </section>
+
+    <footer class="controls">
+      <button id="prevBtn" class="btn" aria-label="Previous step">◀ Prev</button>
+      <div class="hint">Use ← → keys or click steps</div>
+      <button id="nextBtn" class="btn" aria-label="Next step">Next ▶</button>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
